@@ -1,0 +1,11 @@
+table{
+  border: 1px solid #f2f2f2;
+}
+tr{
+  border: 1px solid #f2f2f2;
+}
+th,td{
+width: 200px;
+text-align: left;
+border: 1px solid #f2f2f2;
+}

@@ -1,0 +1,23 @@
+
+<table>
+  <thead>
+    <th>Full Name</th>
+    <th>DOB</th>
+    <th>Phone </th>
+    <th>Address</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let User of Useres">
+      <td>{{ User.name}} {{ User.surname }}</td>
+      <td>{{ User.birthDate }} </td>
+      <td>{{ User.phone }} </td>
+      <td>{{ User.street }}<br> {{ User.city }} </td>
+      <td><a [routerLink]="['/edit', User.id]">Edit </a>|
+          <a (click)="delete(User); $event.stopPropagation()">Delete </a> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<app-popup [close]='showPopup' [title]="popupTitle" [msg]="popupMSg" (closepopupclicked)="ClosePopupAlert()"></app-popup>

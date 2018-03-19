@@ -1,0 +1,31 @@
+<div class="listAllUser">
+  <div style="text-align: right;clear:both;">
+      <button (click)="goBack()">Back</button>
+      <button (click)="saveAllEdit()">Save</button>
+  </div>
+<div *ngFor="let User of Useres" class="resultCard">
+<h2>{{User.name}} details!</h2>
+  <div><label>ID: </label>{{User.id}}</div>
+  
+  <div>
+    <label>Surname: </label>
+    <input [(ngModel)]="User.surname" placeholder="Sur name"/>
+  </div>
+  <div>
+    <label>Date of Birth: </label>
+    <input [(ngModel)]="User.birthDate" placeholder="Date of Birth"/>
+  </div> 
+  <div>
+    <label>street: </label>
+    <input [(ngModel)]="User.street" placeholder="street"/>
+  </div>
+  <div>
+    <label>city: </label>
+    <input [(ngModel)]="User.city" placeholder="city"/>
+  </div>  
+  
+</div>
+</div>
+
+
+ <app-popup [close]='showPopup' [title]="popupTitle" [msg]="popupMSg" (closepopupclicked)="ClosePopupAlert()"></app-popup>

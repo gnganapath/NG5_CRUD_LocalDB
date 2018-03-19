@@ -1,0 +1,9 @@
+<div [hidden]="close"  class="popup-bg">
+    <div class="frame-container">
+      <div class="frame">
+          <div class="title">{{title}}</div>
+          <div class="message" [innerHTML]="msg" ></div>
+          <div class="button button" (click)="closePopup()">Close</div>
+      </div>
+    </div>
+</div>
